@@ -1,0 +1,22 @@
+extends ../layout/index
+block content
+    .container
+        .row
+            .col-sm-8
+                article.speakerslist
+                        each speaker in speakerList
+                            div.speakers.row
+                                div.col-sm-3
+                                    a(href=`/speakers/${speaker.shortname}`)
+                                            img.speakerslist-img.img-circle.pull-left(src=`/images/speakers/${speaker.shortname}_tn.jpg`, alt=`Photo of ${speaker.name}`)
+                                div.col-sm-9
+                                    h3.speakerslist-title=speaker.title
+                                    h5.speakerslist-name 
+                                        | with 
+                                        a(href=`/speakers/${speaker.shortname}`)=speaker.name
+                                    p.speakerslist-info
+                                      =speaker.summary
+                        // row
+                        // container
+
+            include ../includes/sidebar

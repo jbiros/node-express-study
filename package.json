@@ -1,0 +1,26 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "nodemonConfig": {
+    "watch": [
+      "server"
+    ],
+    "ext": "pug,js,json"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec node server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http-errors": "^1.7.3",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3"
+  }
+}
